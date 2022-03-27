@@ -299,7 +299,7 @@ button{
         font-size: 25px;
         padding: 30px;
     }
-    .portofolio .gambar{
+    .portofolio .container {
         align-items: center;
         flex-direction: column;
     }
@@ -343,7 +343,7 @@ button{
     .pengalaman p{
         padding: 30px;
     }
-    .portofolio .gambar{
+    .portofolio .container {
         align-items: center;
         flex-direction: column;
     }
@@ -385,7 +385,7 @@ button{
     .pengalaman p{
         padding: 30px;
     }
-    .portofolio .gambar{
+    .portofolio .container {
         align-items: center;
         flex-direction: column;
     }
