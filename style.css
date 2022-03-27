@@ -242,7 +242,7 @@ button{
     .pengalaman img{
         font-size: 60%;
     }
-    .portofolio .gambar{
+    .portofolio .container {
         align-items: center;
         flex-direction: column;
     
