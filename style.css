@@ -1,0 +1,396 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background: url(./image/wel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: auto;
+
+}
+header p h1{
+    font-size: 60%;
+    font-weight: bold;
+}
+.menu{
+    background: black;
+    position: sticky;
+    top: 0;
+    display: flex;
+    z-index: 2;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-around;
+}
+#destop{
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+}
+ul{
+    display: flex;
+    width: 50%;
+    list-style: none;
+    justify-content: space-around;
+}
+ 
+ul li{
+    display: flex;
+    padding-left: 4px;
+    padding-right: 4px;
+    align-items: center;
+    height: 10vh;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    justify-content: space-around;
+}
+@keyframes menu{
+    0%{
+        background-color: red;
+    }
+    50%{
+        background-color: green;
+    }
+    100%{
+        background-color: blue;
+    }
+}
+.menu ul li:hover{
+    animation: menu 0.51s infinite;
+}
+
+.about{
+    width: 100%;
+    background: snow;
+    text-align: center;
+    justify-content: space-around;
+}
+.about .perkenalan{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    font-size: 20px;
+}
+.about .nama{
+    width: 60%;
+    font-size: 20px;
+}
+.about .nama  img{
+    width: 30%;
+    border-radius: 50%;
+}.about .study  img{
+    width: 30%;
+    border-radius: 50%;
+}.about .skill img{
+    width: 50%;
+    border-radius: 50%;
+}
+.about .pengalaman{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    font-size: 20px;
+}
+.about .study{
+    width: 40%;
+}
+.about .skill{
+    width: 40%;
+}
+.about .skill img{
+    width: 30%;
+    border-radius: 50%;
+
+}
+.portofolio {
+  padding: 30px;
+  text-align: center;
+}
+.portofolio p b{
+    font-size: 20px;
+    text-decoration: underline;
+}
+.portofolio .container{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+}
+.portofolio .card a img{
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@keyframes border{
+    0%{
+        border-top: 2px solid red;
+    }
+    25%{
+        border-right: 2px solid blue;
+    }
+    50%{
+        border-bottom: 2px solid black;
+    }
+    75%{
+        border-left: 2px solid yellow;
+    }
+    100%{
+        border: 2px solid green;
+    }
+} 
+.portofolio img:hover{
+    padding: 15px;
+    animation: border 2s infinite;
+}
+.contac-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#contac-us p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.inputan{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+#input{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+button{
+    color: white;
+    padding: 10px;
+    border: none;
+    background: rgb(25, 25, 185);
+}
+
+.tlp{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tlp img{
+    width: 30px;
+}
+
+#g1{
+    width: 23px;
+}
+
+.footer{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background: black;
+    color: white;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: column;
+}
+
+@media  screen and (max-width:700px) {
+    header p{
+        font-size: 40%;
+    }
+    ul {
+        width: 100%;
+    }
+    .about b{
+        font-size: 80%;
+    }
+    .menu{
+        justify-content: space-around;
+    }
+    #destop{
+         display: none;
+    }     
+    .about{
+        font-size: 20%;
+    }
+    .pengalaman{
+        align-items: center;
+        flex-direction: column;
+    }
+    .pengalaman p{
+        padding: 30px;
+    }
+    .pengalaman img{
+        font-size: 60%;
+    }
+    .portofolio .gambar{
+        align-items: center;
+        flex-direction: column;
+    
+    }
+    .portofolio img{
+        width: 80%;    
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+  
+    .about .study{
+        width: 70%;
+    }
+    .about .skill{
+        width: 70%;
+    }
+
+}
+@media screen and (max-width:1725px) {
+    .menu #destop{
+        font-size: 2.2em;
+    }
+    ul li a{
+        font-size: 1.2em;
+    }
+}
+@media  screen and (max-width:570px) {
+    header p{
+        font-size: 40%;
+    } 
+    
+    
+     .about b{
+        font-size: 80%;
+    }
+    .menu{
+        justify-content: space-around;
+    }
+    #destop{
+         display: none;
+    }     
+    
+    .about p{
+        font-size: 80%;
+    }
+    .about .perkenalan .nama{
+        font-size: 25px;
+    }
+    .pengalaman{
+        align-items: center;
+        flex-direction: column;
+    }
+    .pengalaman p{
+        font-size: 25px;
+        padding: 30px;
+    }
+    .portofolio .gambar{
+        align-items: center;
+        flex-direction: column;
+    }
+    .portofolio img{
+        width: 80%;
+    }
+    .contac-us .inputan #input{
+        width: 70%;
+    }
+   
+}
+@media  screen and (max-width:420px) {
+    header p{
+        font-size: 90%;
+    }
+    ul li a{
+        font-size: 90%;
+     }
+    .about b{
+        font-size: 80%;
+    }
+    .menu{
+        justify-content: space-around;
+    }
+    .menu ul li a{
+        font-size: 20px;
+    }
+    #destop{
+         display: none;
+    }     
+    .about p{
+        font-size: 80%;
+    }
+    .about .perkenalan .nama{
+        font-size: 18px;
+    }
+    .pengalaman{
+        align-items: center;
+        flex-direction: column;
+    }
+    .pengalaman p{
+        padding: 30px;
+    }
+    .portofolio .gambar{
+        align-items: center;
+        flex-direction: column;
+    }
+    .portofolio img{
+        width: 80%;
+    }
+ 
+    
+}
+@media  screen and (max-width:375px) {
+    header p{
+        font-size: 90%;
+    }
+    ul li a{
+        font-size: 90%;
+     }
+    .about b{
+        font-size: 80%;
+    }
+    .menu{
+        justify-content: space-around;
+    }
+    .menu ul li a{
+        font-size: 15px;
+    }
+    #destop{
+         display: none;
+    }     
+    .about p{
+        font-size: 80%;
+    }
+    .about .perkenalan .nama{
+        font-size: 15px;
+    }
+    .pengalaman{
+        align-items: center;
+        flex-direction: column;
+    }
+    .pengalaman p{
+        padding: 30px;
+    }
+    .portofolio .gambar{
+        align-items: center;
+        flex-direction: column;
+    }
+    .portofolio img{
+        width: 80%;
+    }
+    
+}

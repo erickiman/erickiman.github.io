@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>PORTOFOLIO</title>
+</head>
+
+<body>
+    <header>
+        <p><h1>SELAMAT DATANG DI WEBSITE SAYA</h1></p>
+    </header>
+    <div class="menu">
+        <label id="destop">portofolio</label>
+        <ul>
+            <li><a href="#about-me" class="active">About Me</a></li>
+            <li><a href="#portofolio">My Portofolio</a></li>
+            <li><a href="#contac-us">Contac Us</a></li>
+        </ul>
+    </div>
+    <div class="about" id="about-me">
+        <div class="perkenalan">
+            <div class="nama">
+                <img src="./image/profil.jpg" id="poto" class="text" data-aos="fade-down" data-aos-duration="1000"><br>
+                <p class="text" data-aos="fade-up" data-aos-duration="1000">
+                    Perkenalkan saya <b>ERICK IMAN</b>, seorang Web developer
+                    yang berfokus dalam membuat tampilan website yang modern dan responsive
+               </p>
+            </div>
+        </div>
+        <div class="pengalaman">
+            <p class="study" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                <img src="./image/study.png" alt="" srcset="" width="20%" ><br>
+                Saya telah mengikuti beberapa kelas khusus untuk membuat
+                tampilan web responsive dan telah mempunyai beberapa sertifikat
+            </p>
+            <p class="skill"data-aos="fade-left" data-aos-duration="1000" data-aos-delay="220">
+                <img src="./image/kem.jpg" alt="" srcset="">
+                <br>
+                Saya telah mengusasi cara membuat tampilan website dengan menggunakna <b>HTML, CSS dan JavaScript</b>
+                saya juga dapat menggunakan Framework modern seperti Bootstrap
+            </p>
+        </div>
+    </div>
+    <div class="portofolio" id="portofolio">
+        <p><b>My Galery</b></p>
+        <div class="container">
+            <div class="card">
+                <a href="">
+                    <img src="image/se1.jpg" alt="" srcset=""data-aos="flip-right" data-aos-duration="1000"> 
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <img src="image/se2.jpg" alt="" srcset=""data-aos="flip-left" data-aos-duration="1000"> 
+                </a>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+
+    <div class="contac-us" id="contac-us">
+        <p>contac-us</p>
+        <div class="inputan">
+            <form action="https://sheetdb.io/api/v1/z4fglrti74z39" method="POST" id="input">
+                <label for="nama">Name</label>
+                <input type="text" name="data[nama]"id="name" required>
+                <label for="email">Email</label>
+                <input type="email" name="data[email]" id="email" required>
+                <label for="pesan">Pesan</label>
+                <textarea name="data[pesan]" id="pesan" cols="30" rows="10" id="pesan" required></textarea><br>
+                <button type="submit" onclick="myinfo()" class="btn-kirim" id="bottonLogin">kirim</button>
+                
+                <div class="tlp">
+                    <a href="tel: 0878-4048-6301" class="icon1">
+                        <img src="./image/tlp.png" alt="satu" srcset="" id="g1">
+                    </a>
+                    <a href="" class="icon2">
+                        <img src="./image/gmail2.png" alt="dua" srcset=""id="g2">
+                    </a>
+                    <a href="" class="icon3">
+                        <img src="./image/linkedin.png" alt="tiga" srcset=""id="g3">
+                    </a>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <p>copyright&copy; erick 2022-2023</p>
+    </div>
+<script>
+     var form = document.getElementById('input');
+form.addEventListener("submit", e =>{
+    e.preventDefault();
+    fetch(form.action,{
+        method : "post",
+        body: new FormData(document.getElementById("input")), 
+    }).then(
+        response => response.json()
+    ).then(
+        
+        function myinfo() {
+            alert('Terkirim');
+        }
+    ).then(
+        form.reset()
+    )
+});
+    
+</script>
+
+<!-- aos libary -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+     once: true
+  });
+</script>
+
+
+
+
+
+</body>
+
+</html>
+ 
